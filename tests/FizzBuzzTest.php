@@ -34,13 +34,14 @@ class FizzBuzzTest extends TestCase
             [1, "c", "Invalid Range Whole Numbers Only Please"],
             ["a", 2, "Invalid Range Whole Numbers Only Please"],
             [0, 0, "fizzbuzz"],
-            [-3, 3, "fizz -2 -1 fizzbuzz 1 2 fizz"],
+            [-3, 3, "lucky -2 -1 fizzbuzz 1 2 lucky"],
             [-3.3, 3.3, "Invalid Range Whole Numbers Only Please"],
-            [1, 3, "1 2 fizz"],
-            [3, 5, "fizz 4 buzz"],
-            [1, 5, "1 2 fizz 4 buzz"],
-            [1, 15, "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz"],
-            [1, 20, "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz"]
+            [1, 3, "1 2 lucky"],
+            [3, 5, "lucky 4 buzz"],
+            [1, 5, "1 2 lucky 4 buzz"],
+            [1, 15, "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz"],
+            [1, 20, "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz"],
+            [90, 93, "fizzbuzz 91 92 lucky"]
         ];
     }
 

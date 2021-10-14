@@ -4,6 +4,13 @@ namespace FizzBuzz;
 
 class FizzBuzz
 {
+
+
+    function checkForLucky($num) {
+        return strpos((string)$num, '3' ) !== false ? "lucky" : $num;
+    }
+
+
     public function outputFizzBuzz($start = null, $end = null)
     {
 
@@ -25,16 +32,25 @@ class FizzBuzz
         $range = range($start, $end);
         $output = "";
 
+
+
+
         foreach ($range as $number) {
 
+
             if ($number % 3 == 0) {
-                $output .= "fizz";
+
+                $this->checkForLucky($number) === "lucky" ? $output .="lucky" : $output .= "fizz";
+
             }
+
             if ($number % 5 == 0) {
                 $output .= "buzz";
             }
+
+
             if ($number % 3 != 0 && $number % 5 != 0) {
-                $output .= strval($number);
+                $this->checkForLucky($number) === "lucky" ? $output .="lucky":$output .= strval($number);
             }
             $output .= " ";
 
