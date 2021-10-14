@@ -1,0 +1,30 @@
+{
+    "name": "jackstrube/fizzbuzz",
+    "description": "Fizz Buzz code demo with TDD",
+    "require": {
+
+    },
+    "classmap": [
+        "src/"
+    ],
+    "require-dev": {
+        "php": "^7.2",
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "FizzBuzz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FizzBuzz\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jack Strube",
+            "email": "jackstrube@gmail.com"
+        }
+    ]
+}
