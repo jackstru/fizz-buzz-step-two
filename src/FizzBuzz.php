@@ -44,11 +44,12 @@ class FizzBuzz
 
             }
 
-            if ($number % 5 == 0) {
-                $output .= "buzz";
+            if ($number % 5 == 0 && $number % 3 != 0) {
+                //$output .= "buzz";
+                $this->checkForLucky($number) === "lucky" ? $output .="lucky" : $output .= "buzz";
             }
 
-
+/// Watch for 30s
             if ($number % 3 != 0 && $number % 5 != 0) {
                 $this->checkForLucky($number) === "lucky" ? $output .="lucky":$output .= strval($number);
             }
