@@ -32,9 +32,6 @@ class FizzBuzz
         $range = range($start, $end);
         $output = "";
 
-
-
-
         foreach ($range as $number) {
             if($this->checkForLucky($number)) {
                 $output .="lucky";
