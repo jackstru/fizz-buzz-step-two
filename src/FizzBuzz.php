@@ -7,7 +7,7 @@ class FizzBuzz
 
 
     function checkForLucky($num) {
-        return strpos((string)$num, '3' ) !== false ? "lucky" : $num;
+        return strpos((string)$num, '3' ) !== false;
     }
 
 
@@ -36,22 +36,16 @@ class FizzBuzz
 
 
         foreach ($range as $number) {
-
-
-            if ($number % 3 == 0) {
-
-                $this->checkForLucky($number) === "lucky" ? $output .="lucky" : $output .= "fizz";
-
-            }
-
-            if ($number % 5 == 0 && $number % 3 != 0) {
-                //$output .= "buzz";
-                $this->checkForLucky($number) === "lucky" ? $output .="lucky" : $output .= "buzz";
-            }
-
-/// Watch for 30s
-            if ($number % 3 != 0 && $number % 5 != 0) {
-                $this->checkForLucky($number) === "lucky" ? $output .="lucky":$output .= strval($number);
+            if($this->checkForLucky($number)) {
+                $output .="lucky";
+            }elseif($number % 15 == 0) {
+                $output .= "fizzbuzz";
+            }elseif($number % 3 == 0) {
+                $output .= "fizz";
+            }elseif($number % 5 == 0) {
+                $output .= "buzz";
+            }elseif($number % 3 != 0 && $number % 5 != 0) {
+                $output .= strval($number);
             }
             $output .= " ";
 
